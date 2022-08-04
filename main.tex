@@ -1,6 +1,6 @@
-%ENGR 408 ACRP DESIGN PROJECT (2023 COMPETITION YEAR)
-%WRITTEN BY A. STEPKO; M. GALIANI; B. MCLERNAN; S. TIPNIS; J. WEED
-%FACULTY ADVISOR: PROF. STEVE BETZA
+% ENGR408 ACRP DESIGN PROJECT (2023 COMPETITION YEAR)
+% WRITTEN BY A. STEPKO; M. GALIANI; B. MCLERNAN; S. TIPNIS; J. WEED
+% FACULTY ADVISOR: PROF. STEVE BETZA
 
 %--------------- Packages and global configurations -------------------------%
 \documentclass[12pt]{article}
@@ -24,6 +24,9 @@
 %Graphics packages:
 \usepackage{adjustbox}
 \usepackage{float}
+\usepackage{booktabs}  %for tables
+\usepackage[table]{xcolor}
+\usepackage{multirow}
 \usepackage[section]{placeins}
 \usepackage{afterpage}
 \usepackage{graphicx}
@@ -37,7 +40,7 @@
 %Bibliography configuration:
 \usepackage{biblatex}
 \usepackage[english]{babel}
-\addbibresource{sourceCites.bib}
+\addbibresource{mendeleyImport.bib}
 
 \doublespacing %Enables global doublespace, will have to disable locally for single spacing
 
@@ -55,7 +58,7 @@
 \usepackage{subfiles} % Best loaded last in the preamble
 
 % --------------------  Begin title page --------------%
-\title{\line(1,0){300}\\\texttt{RELEASE FOR DRAFT ONLY:}\\Sustainable Power Generation and Distribution for Electric Aircraft\\\line(1,0){300}}
+\title{\line(1,0){300}\\\texttt{RELEASE FOR DRAFT ONLY!}\\Sustainable Power Generation and Distribution for Electric Aircraft\\\line(1,0){300}}
 \author{
     Michael Galiani | mpg5835@psu.edu\\
     Brendan McLernan | bxm5554@psu.edu\\
@@ -67,7 +70,7 @@
 \affil{The Pennsylvania State University}
 \date{\today}
 
-
+%------------------- Begin the bulk of the document  --------------------------%
 
 \begin{document}             % End of preamble and beginning of text.
 \begin{titlepage}
@@ -76,8 +79,6 @@
 \newpage
 \raggedright
 \parindent15pt
-%------------------- Begin the bulk of the document  --------------------------%
-
 
 \subfile{mainSections/exSummary}
 
@@ -93,15 +94,20 @@
 \newpage
 \subfile{mainSections/litRev}
 
-\newpage
-\subfile{mainSections/designProcess}
+%\newpage
+%\subfile{mainSections/designProcess}
 
-\newpage
-\subfile{mainSections/prototyping}
+%\newpage
+%\subfile{mainSections/prototyping}
 
 \newpage
 \subfile{mainSections/finalDesign}
 
+\clearpage
+\pagenumbering{arabic}% resets `page` counter to 1
+\renewcommand*{\thepage}{A-\arabic{page}}
+
+\newpage
 \subfile{appendices/fullApp}
 
 \end{document}               % End of document.
