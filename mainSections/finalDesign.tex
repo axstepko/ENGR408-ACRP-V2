@@ -68,23 +68,25 @@ Alternatively, an airport could use its associated electrical grid as somewhat o
 
 \subsection{Energy Transfer to Aircraft} % SANA'S SECTION
 Once we have decided where we store this power and how we actually distribute this power, it is paramount to consider how we will transfer this energy to their aircraft using our design model. We know that traditionally, this is done by refueling with hydrocarbon fuels through a complicated network of tanks and pumps. Additionally, maintenance of the fuel distribution system is extremely expensive for an airport. With the usage of electric aircraft, airports no longer need to consider the logistics of fuel transfer. Instead, energy transfer is accomplished via battery chargers with a significantly lower operational costs.\par
-Battery charging can be split into two pathways, swapping batteries and recharging batteries. Depending on specific facets of the airport, airports could adopt either model to best benefit their aircraft. First, we would consider swapping batteries. To greatly decrease turnaround time for an air frame, we would feature the capability to swap entire battery modules between planes and charging bays, eliminating the air frame’s downtime to charge batteries. This is a much more efficient solution, and the preferred one, ir airports have the capacity to do so. Out-of-airframe charging with battery swaps ensures adequate cooling, charge rates, and the subsequent preservation the battery chemistry, albeit a much more technically complex infrastructure solution.\par
+Battery charging can be split into two pathways, swapping batteries and recharging batteries. Depending on specific facets of the airport, airports could adopt either model to best benefit their aircraft. First, we would consider swapping batteries. To greatly decrease turnaround time for an air frame, we would feature the capability to swap entire battery modules between planes and charging bays, eliminating the air frame’s downtime to charge batteries. This is a much more efficient solution, and the preferred one, if airports have the capacity to do so. Out-of-airframe charging with battery swaps ensures adequate cooling, charge rates, and the subsequent preservation the battery chemistry, albeit a much more technically complex infrastructure solution.\par
 The other model is recharging batteries held within the airframe. This is likely the more feasible solution for airports, especially during the beginning stages of electric aircraft implementation. This would require charging stations to be set up at hangars or on designated areas of tarmac at the site. A scalable model would be built to implement these charging stations depending on the size of the aircraft, taking into consideration the anticipated fleets and operational needs. This way, aircraft could have a set road map to follow of how to implement these charging stations, no matter the size, and ensure uniform implementation across the board. With a standardized charging system available at multiple sites, a flight network soon amasses.\par
 We have thought about the different ways energy can be transferred to the aircraft, and through both swapping and recharging batteries, aircraft are able to make sure their planes get the proper charge and care they need to provide energy to their trips. 
 
 % * <Alex Stepko> 19:44:36 04 Aug 2022 UTC-0400:
 % I went through and revised the first 3 lines of your writing. Great job mentioning how we have considered the many kinds of charging systems.
- including a description of processes that would need to be undertaken to bring the design to the product/ implementation state. Emphasis should be on increased affordability and utility.
+
 % * <sat5652@psu.edu> 18:06:47 04 Aug 2022 UTC-0400:
 % still need to hone in on this in my section...will do tonight
 
-This part of the solution would meet ACRP goals, specifically goal 3 which states, "Engage students at U.S. colleges and universities in the conceptualization of applications, systems and equipment capable of addressing related challenges in a robust, reliable and comprehensive manner." By thoroughly analyzing the different ways energy can be transferred to these airports, because we know not every airport can have a one size fits all solution, we have thoroughly looked at the challenge in a comprehensive manner, bringing a detailed final prototype to help combat this issue. 
-The projected benefits of this solution would be the feasibility for any airport to implement this issue to ensure clean power generation.
+This part of the solution would meet ACRP goals, specifically goal 3 which states, "Engage students at U.S. colleges and universities in the conceptualization of applications, systems and equipment capable of addressing related challenges in a robust, reliable and comprehensive manner." By thoroughly analyzing the different ways energy can be transferred to these airports, because we know not every airport can have a one size fits all solution, we have thoroughly looked at the challenge in a comprehensive manner, bringing a detailed final prototype to help combat this issue. The projected benefits of this solution would be the feasibility for any airport to implement this issue to ensure clean power generation.
 
 \section{System Implementation}
 The broad applicative nature of our solution requires a site selected for analysis. For simplicity and convenience, the University Park Airport in State College, Pennsylvania was chosen. This airport features a stable cargo and passenger throughput, and also maintains a relatively straightforward operational mode. In 2016, the University Park Airport released a \emph{Sustainable Master Plan} \cite{SCEplan} of the site detailing its operational statistics and planned improvements. The operational statistics of the airport were then utilized to develop a site model for the Risk Matrix and Cost-Benefit Analysis of this report.\par
 
 \subsection{Safety Risk Analysis} % JADEN'S SECTION
+
+%Jaden here's what was in the ACRP project guidelines:
+%   Safety Risk Assessment: The FAA promotes a culture of safety throughout all its operations. Examine     existing FAA safety management system guidance as it relates to your proposed design solution. C      Consider inherent risks and describe how these risks should be addressed to ensure safe operations.   Be sure to reference Introduction to Safety Management Systems for Airport Operators (FAA Advisory    Circular 150/5200-37) and FAA Safety Management System Manual available under the Resources           section of the Competition website. See video with additional guidance on this section at the         Competition website
 
 \subsection{Cost Benefit Analysis} % ALEX'S SECTION
 The Cost-Benefit Analysis (CBA) of the proposed site implementation plan was developed using a thoroughly analyzed site model. This model accounts for a variety of factors; however, for simplicity sake assumptions have been made. The model makes assumptions about both the economic and technological aspects of the project, and were made in order to simplify the CBA. The assumptions are listed below, for maximum transparency into the solution's logic.
@@ -116,13 +118,24 @@ With these assumptions made, the financial aspect of the site model can be synth
 To describe the solution, it was necessary to outline the processes followed to develop an infrastructure solution. In prototyping, a "roadmap" was developed to satisfy this need. This piece of information roughly outlines the constituent components necessary for a sustainable infrastructure system, and can be seen below in Figure \ref{fig:roadmap}.
 \begin{figure}[h!]
     \centering
-    \fbox{\includegraphics[width=\sbWidth]{roadmapV2.pdf}}
-    \caption{General guidelines for the development of EA infrastructure at a given site}
+    \fbox{\includegraphics[width=6in]{roadmapV2.jpg}}
+    \caption{General guidelines for the development of EA infrastructure}
     \label{fig:roadmap}
     \centering
 \end{figure}
 \FloatBarrier
-Using this roadmap, it was first necessary to determine the cargo requirements of the site.
-
+Using this roadmap, it was first necessary to determine the terrestrial constraints of the site. Using satellite imagery and publicly available climate data, a set of constraints were determined for the site. These constraints play implications in the power generation system choice and size.\par
+Next, the cargo throughput of the airport was analyzed.The University Park Airport's \emph{Sustainable Master Plan} includes cargo throughput for operation years, and also demonstrates that the airport follows the national average CAGR for cargo throughput at an airport. Notably, this shows that this site is a good indicator of the solution's implementation at other sites. Using this data, cargo capacity was extrapolated to future decades. Additionally, the carrier fleets in use at the airport were analyzed resulting in an average number of flights per day at a given cargo throughput capacity. Next, A target fleet of electric aircraft was utilized to develop a number of flights per day required to match their jet fuel counterparts. This resulted in an amount of power required per day in order to support fully sustainable operation of the electric aircraft.\par
+With the result of both of these analyses, a power generation system can be selected. Low winds and ground heat capacity both indicate that wind and geothermal generation solutions are not viable for a large-capacity generation system. Solar panels hold great viability both in terms of site constraints and cargo throughput requirements. A simple survey of the terrain provides installation area for the solar panels, as seen in Figure \ref{fig:panelSites}.\par
+\begin{figure}[h!]
+    \centering
+    \fbox{\includegraphics[width=4in]{UPSitePicture.jpg}}
+    \caption{Installation site of solar panels}
+    \label{fig:panelSites}
+    \centering
+\end{figure}
+\FloatBarrier
+There is approximately $500000ft^{2}$ of available space for solar panels. Low glare solar panels were selected, and approximate distribution cable lengths were determined in AutoCAD. From this amount of panel required, standard civil and electrical labor amounts were approximated.\par
+Airport employees that interface with this system will require substantial training.
 
 \end{document}
