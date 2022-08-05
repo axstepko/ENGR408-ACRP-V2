@@ -1,11 +1,36 @@
 \documentclass[../main.tex]{subfiles}
 %\graphicspath{{\subfix{../images/}}}
 
-\begin{document}
-\section{Problem Solving Approach and System Design}\label{finalDesign}
+\newcommand\sbWidth{\textwidth} %Use this to set the width of all images simultaneously!
 
+\begin{document}
+\section{Problem Solving Approach}\label{finalDesign}
 Prior research into the topic of alternatively powered aircraft has shown great viability in the area of electric aircraft, especially within the areas of short-haul cargo logistics. Right-on-time supply chain architecture, especially in areas of e-Commerce has created a demand for quick, efficient package distribution networks. As a result, major logistic carriers see electric aircraft as a viable option to satisfy both the consumer and their sustainability goals.It is also evidently clear that both package carriers and airports do not retain internal resources capable of designing such an infrastructure system for electric aircraft that maintains consistency and viability during the lifetime of the system.\par
-Our solution acts as the consultant for both airports and/or logistics companies as a system integrator for this problem. In order for such a solution involving electric aircraft to be environmentally sound, it is crucial to consider the complete infrastructure system necessary to support the new form of air transport. These system elements can be broadly comprised into the following categories:
+With the results from the reviewed literature in consideraiton, a few solution paths were considered. These solutions were entered into a Decision Matrix seen in Figure \ref{fig:decisionMatrix}, which helped to guide our final solution. The following page shows the resultant selection matrix indicating the best (green) and worst (red) solutions. Scores for each category were aggregated via simple mean value between independent team member assessment.\par
+For easy reference in the solution matrix, below can be found a short description of each solution:
+\begin{singlespace}
+\begin{description}
+    \item[Solution \#1:] A privatized aircraft hangar supplied by the customer for use by solely the customer.
+    \item[Solution \#2:] Airport or FBO-owned airport hangars for use by multiple companies wishing to operate EA out of the airport.
+    \item[Solution \#3:] Development of a subsidy package for local/state/federal government funding of infrastructure installation.
+    \item[Solution \#4:] A distributed power generation, storage, and distribution system for charging EA.
+    \item[Solution \#5:] A large-scale power generation system with capability for on-grid power transfer.
+\end{description}
+\end{singlespace}
+\begin{figure}[ht]
+  \begin{adjustbox}{addcode={\begin{minipage}{\width}}{\caption{
+      Decision Matrix of Proposed Solutions
+      }
+      \label{fig:decisionMatrix}
+      \end{minipage}},rotate=-90,center}
+      \includegraphics[scale=.6]{selectionMatrixV2.pdf}
+  \end{adjustbox}
+\end{figure}
+\FloatBarrier
+\section{System Design}
+The result of this decision matrix demonstrates that the implementation of electric aircraft is a multi-faceted problem that requires many different aspects. It is also clear that considering a single element of electric aircraft does not essentially result in reliable, sustainable implementation of this new type of aircraft.\par
+Our solution acts as the consultant for both airports and/or logistics companies as a system integrator for this problem. In order for such a solution involving electric aircraft to be environmentally sound, it is crucial to consider the complete infrastructure system necessary to support the new form of air transport.\par
+These system elements can be broadly comprised into the following categories:
 \begin{singlespace}
 \begin{enumerate}
     \item Marketing of Electric Aircraft Integration
@@ -19,9 +44,9 @@ Our solution acts as the consultant for both airports and/or logistics companies
 \end{singlespace}
 
 \subsection{Marketing of Electric Aircraft Integration} % MICHAEL'S SECTION
-The adoption of Electric planes in the flight industry is not a question of if or how, but when. At this point in time, the addition of electric airplanes to our skies is merely a natural progression we are now witnessing and will continue to witness. This new market brings a better today along with a cleaner tomorrow by combining cheaper flights with greener transportation. In combination with a sustainable power generation source such as anti-glare solar panels, moderately frequent flights will cost virtually nothing in “fuel” or charging rates. Creating green power generation will pay for itself over and over as airports continue to use this energy for their flights creating cost efficient flight affiliated fares for both the passengers and airports.\par
-When discussing just the cargo and shipping capabilities, electric planes will dominate the industry. The world is constantly attracted to “faster, better, smarter” technology, and the biggest demand in the shipping world is speed. Overnight shipping, two-to-three-day shipping, you name it, every large bountiful product transport company has it. Electric planes, especially VTOL models, are ideal for not only assuring these fast and demanded services but creating a cleaner wave of transportation in the process. The most accepted form of electric aircraft are currently smaller airplanes ideal for frequent fast flights such as overnight shipment delivery.\par
-A large benefit of green airfare is that in the event of a fuel shortage or large spike in jet fuel, electric planes will be barely affected. Because most of the “refueling” or charging process, if not all is done naturally, electric airplanes will flourish in the event of a liquid fuel shortage or inflation. Airlines can offer exclusive deals, rates, and opportunities unheard of to customers through the electric plane avenue, changing the dynamic of flight fares.  The earlier an airport accepts and inducts these aircrafts, the more profitable the airport will be in the near future.\par 
+The adoption of Electric planes in the flight industry is not a question of if or how, but when. At this point in time, the addition of electric airplanes to our skies is merely a natural progression we are now witnessing and will continue to witness. This new market brings a better today along with a cleaner tomorrow by combining cheaper flights with greener transportation. In combination with a sustainable power generation source such as anti-glare solar panels, moderately frequent flights will cost virtually nothing in electricity as compared to fossil fuels. Creating green power generation will pay for itself over and over as airports continue to use this energy for their flights creating cost efficient flight affiliated fares for both the passengers and airports.\par
+When discussing just the cargo and shipping capabilities, electric planes will dominate the industry. The world is constantly attracted to "faster, better, smarter" technology, and the biggest demand in the shipping world is speed. Overnight shipping, two-to-three-day shipping, you name it, every large bountiful product transport company has it. Electric planes, especially VTOL models, are ideal for not only assuring these fast and demanded services but creating a cleaner wave of transportation in the process. The most accepted form of electric aircraft are currently smaller airplanes ideal for frequent fast flights such as overnight shipment delivery, and this market segment holds massive growth capability.\par
+A large benefit of green airfare is that in the event of a fuel shortage or large spike in jet fuel, electric planes will be barely affected. Because most of the "refueling" or charging process, if not all, is done naturally, electric airplanes will flourish in the event of a liquid fuel shortage or in times of hyperinflation. Airlines can offer exclusive deals, rates, and opportunities unheard of to customers through the electric plane avenue, changing the dynamic of flight fares and cargo rates.  The earlier an airport accepts and inducts these types of aircraft, the more profitable the airport will be in the near future.\par 
 
 \subsection{Sustainable Power Generation} % ALEX'S SECTION
 The concept of sustainable power generation is an inherently complex topic that in of itself can constitute a solution. However, our research has shown there is great value in providing a solution capable of performing the analysis necessary to implement a sustainable power generation system at a given site. A variety of factors contribute to the overall design, including but not limited to: climate, geography, flight throughput, maintenance costs, and the life cycle of the system. It is crucial to have a rudimentary understanding of these concepts in order to properly design the system.\par
@@ -31,45 +56,73 @@ Most crucially, the system design must contain enough generation capacity. Witho
 The aforementioned assessments culminate into a site model that can be utilized in the selection of various power generation methods.
 
 \subsection{Power Storage} % BRENDAN'S SECTION
-The power storage aspect of our solution is complementary to the sustainable generation of power.  There are multiple options for storing and/or offloading the generated power that an airport must consider. 
-The first option is investing in large scale battery storage so that the generated electricity can be stored before an electric aircraft requires recharging. This option would be favorable for an airport that utilizes battery-swapping methods for aircraft rather than recharging-- a concept that is further detailed in the "Energy Transfer to Aircraft" section. However, this can be a costly consideration that loses efficiency as the energy is transferred between batteries. The battery technology is also still improving, so such an investment would be ineffective in the long-term. 
-Alternatively, an airport could use its associated electrical grid as somewhat of a battery. The airport would offload it's  electricity into the grid as it is generated, and when aircraft require charging they can pull from this same grid. This option would be less viable in remote areas considering the electrical grid would have lower demand. This is favorable near large cities or other areas with infrastructure demanding large amounts of electricity (i.e. refineries, factories, etc.). This is also a relatively low-risk option for an airport because the ability to offload the generated energy would be sustainable in the unlikely event of electric aircraft failing. 
+The power storage aspect of our solution is complementary to the sustainable generation of power.  There are multiple options for storing and/or offloading the generated power that an airport must consider.\par 
+%The first option is investing in large scale battery storage so that the generated electricity can be stored before an electric aircraft requires recharging. This option would be favorable for an airport that utilizes battery-swapping methods for aircraft rather than recharging-- a concept that is further detailed in the "Energy Transfer to Aircraft" section. However, this can be a costly consideration that loses efficiency as the energy is transferred between batteries. The battery technology is also still improving, so such an investment would be ineffective in the long-term.\par
+
+% * <Alex Stepko> 19:45:11 04 Aug 2022 UTC-0400:
+% Brendan, I re-worded this paragraph below. I really liked your talking points
+The first and most obvious option is to invest in localized large-scale battery storage systems. These systems will store the electricity generated on-site, and will then deliver energy to the aircraft via the selected charging system. For sites that utilize a battery-swapping operational model, the batteries swapped from aircraft can be utilized as the storage elements. For a more traditional on-aircraft charging system, a separate set of batteries is necessary. This requirement can be extremely costly for a site, as the power density of current battery technology is rather low and major strides in performance are being made in this technology sector.\par
+Alternatively, an airport could use its associated electrical grid as somewhat of a battery. The airport would offload it's  electricity into the grid as it is generated, and when aircraft require charging they can pull from this same grid. This option would be less viable in remote areas considering the electrical grid would have lower demand, and the transmission capabilities may already be limited. This is favorable near large cities or other areas with infrastructure demanding large amounts of electricity (i.e. refineries, factories, etc.). For more civilized areas, this storage option proves relatively low-risk, as the airport would be able to sell generated power to the grid if demand for electric aircraft is not as projected.\par
 
 \subsection{Power Distribution} % ALEX'S SECTION
 
-\subsubsection{Energy Transfer to Aircraft} % SANA'S SECTION
-Once we have decided where we store this power and how we actually distribute this power, it is paramount to consider how we will transfer this energy to their aircraft using our design model. We know that traditionally, this is done by refueling with hydrocarbon fuels through a complicated network of tanks and pumps. Maintenance of the fuel distribution system is extremely expensive for an airport. With the usage of electric aircraft, airports no longer need to consider the logistics of fuel transfer. Instead, energy transfer is accomplished via battery chargers.\par
-Battery charging can be split into two pathways, swapping batteries and recharging batteries. Depending on specific facets of the airport, airports could adopt either model to best benefit their aircraft. First, we would consider swapping batteries. To greatly decrease turnaround time for an air frame, we would feature the capability to swap entire battery modules between planes and charging bays, eliminating the air frame’s downtime to charge batteries. This is a much more efficient solution, and the preferred one, ir airports have the capacity to do so. Out-of-airframe charging with battery swaps ensures adequate cooling, charge rates, and the subsequent preservation the battery chemistry  
-The other model is recharging batteries, likely the more feasible solution for airports, especially during the beginning stages of electric aircraft implementation. This would require charging stations to be set up in the hangers in the aircraft. A scaleable model would be built to implement these charging stations depending on the size of the aircraft. This way, aircraft could have a set road map to follow of how to implement these charging stations, no matter the size, and ensure uniform implementation across the board. 
+\subsection{Energy Transfer to Aircraft} % SANA'S SECTION
+Once we have decided where we store this power and how we actually distribute this power, it is paramount to consider how we will transfer this energy to their aircraft using our design model. We know that traditionally, this is done by refueling with hydrocarbon fuels through a complicated network of tanks and pumps. Additionally, maintenance of the fuel distribution system is extremely expensive for an airport. With the usage of electric aircraft, airports no longer need to consider the logistics of fuel transfer. Instead, energy transfer is accomplished via battery chargers with a significantly lower operational costs.\par
+Battery charging can be split into two pathways, swapping batteries and recharging batteries. Depending on specific facets of the airport, airports could adopt either model to best benefit their aircraft. First, we would consider swapping batteries. To greatly decrease turnaround time for an air frame, we would feature the capability to swap entire battery modules between planes and charging bays, eliminating the air frame’s downtime to charge batteries. This is a much more efficient solution, and the preferred one, ir airports have the capacity to do so. Out-of-airframe charging with battery swaps ensures adequate cooling, charge rates, and the subsequent preservation the battery chemistry, albeit a much more technically complex infrastructure solution.\par
+The other model is recharging batteries held within the airframe. This is likely the more feasible solution for airports, especially during the beginning stages of electric aircraft implementation. This would require charging stations to be set up at hangars or on designated areas of tarmac at the site. A scalable model would be built to implement these charging stations depending on the size of the aircraft, taking into consideration the anticipated fleets and operational needs. This way, aircraft could have a set road map to follow of how to implement these charging stations, no matter the size, and ensure uniform implementation across the board. With a standardized charging system available at multiple sites, a flight network soon amasses.\par
 We have thought about the different ways energy can be transferred to the aircraft, and through both swapping and recharging batteries, aircraft are able to make sure their planes get the proper charge and care they need to provide energy to their trips. 
 
+% * <Alex Stepko> 19:44:36 04 Aug 2022 UTC-0400:
+% I went through and revised the first 3 lines of your writing. Great job mentioning how we have considered the many kinds of charging systems.
  including a description of processes that would need to be undertaken to bring the design to the product/ implementation state. Emphasis should be on increased affordability and utility.
 % * <sat5652@psu.edu> 18:06:47 04 Aug 2022 UTC-0400:
 % still need to hone in on this in my section...will do tonight
 
 This part of the solution would meet ACRP goals, specifically goal 3 which states, "Engage students at U.S. colleges and universities in the conceptualization of applications, systems and equipment capable of addressing related challenges in a robust, reliable and comprehensive manner." By thoroughly analyzing the different ways energy can be transferred to these airports, because we know not every airport can have a one size fits all solution, we have thoroughly looked at the challenge in a comprehensive manner, bringing a detailed final prototype to help combat this issue. 
-The projected benefits of this solution would be the feasibility for any airport to implement this issue to ensure clean power generation. 
+The projected benefits of this solution would be the feasibility for any airport to implement this issue to ensure clean power generation.
 
-\section{Safety Risk Analysis} % JADEN'S SECTION
+\section{System Implementation}
+The broad applicative nature of our solution requires a site selected for analysis. For simplicity and convenience, the University Park Airport in State College, Pennsylvania was chosen. This airport features a stable cargo and passenger throughput, and also maintains a relatively straightforward operational mode. In 2016, the University Park Airport released a \emph{Sustainable Master Plan} \cite{SCEplan} of the site detailing its operational statistics and planned improvements. The operational statistics of the airport were then utilized to develop a site model for the Risk Matrix and Cost-Benefit Analysis of this report.\par
 
-\section{Cost Benefit Analysis} % ALEX'S SECTION
+\subsection{Safety Risk Analysis} % JADEN'S SECTION
 
-The broad and applicative nature of our solution requires a site selected for analysis. For simplicity and convenience, the University Park Airport located in State College, Pennsylvania was chosen. This airport features stable passenger and cargo throughput, and an easily analyzed operational structure. Basic statistics on the airport are also available through a \emph{Sustainable Master Plan} published by the airport itself \cite{SCEplan} in 2016, which will suffice for a demonstration of the solution.\par
-% * <Alex Stepko> 23:24:38 03 Aug 2022 UTC-0400:
-% this might get deleted, not sure yet.
-% * <Alex Stepko> 22:36:41 03 Aug 2022 UTC-0400:
-% We may want to move this to the end of the paper as an intro to the CBA.
+\subsection{Cost Benefit Analysis} % ALEX'S SECTION
+The Cost-Benefit Analysis (CBA) of the proposed site implementation plan was developed using a thoroughly analyzed site model. This model accounts for a variety of factors; however, for simplicity sake assumptions have been made. The model makes assumptions about both the economic and technological aspects of the project, and were made in order to simplify the CBA. The assumptions are listed below, for maximum transparency into the solution's logic.
+\begin{enumerate}
+\begin{singlespace}
+    \item Inflation rates are 0\%.
+    \item The cost of electricity is constant.
+    \item Solar panels remain at a fixed price, and do not decrease in performance over the life of the system.
+    \item Temperate climate conducive to solar generation capacity required for the energy demands of the site.
+    \item Labor rates and costs remain constant.
+    \item Static depreciation of the system.
+    \item Average cargo capacity of the electric aircraft utilizing the site are consistent with their traditional counterpart aircraft at the site.
+\end{singlespace}
+\end{enumerate}
 
-
-As mentioned in section \ref{sysOverview}, placing quantitative values on our solution's viability requires a specific deployment site. This then provides the necessary data required for analysis of a certain part of the system. The University Park Airport has made available their \emph{Sustainable Master Plan}, which gives basic statistics pertaining to cargo throughput \cite{SCEplan}. With these statistics in mind, a Cost-Benefit-Analysis was developed, and can be seen below in Figure \ref{fig:CBA}.
-
-
-\begin{figure}
-\centering
-\includegraphics[width = 7.5in, angle = -90]{CBAv1.pdf}
-\caption{University Park Airport Cost Benefit Analysis}
-\label{fig:CBA}
+With these assumptions made, the financial aspect of the site model can be synthesized using various resources. Our CBA accounts for enough power generation, charging, and distribution capacity to support cargo operations at the site up until approximately the year 2040, using industry-standard cumulative aggregate growth rate prediction modeling. The result of this analysis can be seen in Figure \ref{fig:CBA}.
+\begin{figure}[ht]
+  \begin{adjustbox}{addcode={\begin{minipage}{\width}}{\caption{
+      Cost-Benefit Analysis of the University Park Airport
+      }
+      \label{fig:CBA}
+      \end{minipage}},rotate=-90,center}
+      \includegraphics[scale=.6]{CBAv1.pdf}%
+  \end{adjustbox}
 \end{figure}
 \FloatBarrier
+
+% explain the analysis process
+To describe the solution, it was necessary to outline the processes followed to develop an infrastructure solution. In prototyping, a "roadmap" was developed to satisfy this need. This piece of information roughly outlines the constituent components necessary for a sustainable infrastructure system, and can be seen below in Figure \ref{fig:roadmap}.
+\begin{figure}[h!]
+    \centering
+    \fbox{\includegraphics[width=\sbWidth]{roadmapV2.pdf}}
+    \caption{General guidelines for the development of EA infrastructure at a given site}
+    \label{fig:roadmap}
+    \centering
+\end{figure}
+\FloatBarrier
+Using this roadmap, it was first necessary to determine the cargo requirements of the site.
+
 
 \end{document}
